@@ -10,9 +10,8 @@ Run the script and follow the assistant:
 
 Once it ends, you can run it again to add more users, remove some of them or even completely uninstall OpenVPN.
 
-### I want to run my own VPN but don't have a server for that
-You can get a little VPS for just $2.99/month at [Bandwagon Host](https://bandwagonhost.com/aff.php?aff=575&pid=43).
+### In case your openvpn server failed to start with error: "daemon() failed or unsupported: Resource temporarily unavailable (errno=11)"
 
-### Donations
+Set LimitNPROC=infinity in /lib/systemd/system/openvpn@.service.
 
-If you want to show your appreciation, you can donate via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VBAYDL34Z7J6L) or [Bitcoin](https://pastebin.com/raw/M2JJpQpC). Thanks!
+And run systemctl daemon-reload after that.
